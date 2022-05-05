@@ -55,6 +55,7 @@ loading = setInterval(function () {
         }
 
         let content = "";
+        let lines = 0;
 
         for (let turn = 0; turn < elements.length; turn++) {
             let element = elements[turn];
@@ -67,12 +68,13 @@ loading = setInterval(function () {
 
             for (let line of element.getElementsByClassName("outputLine")) {
                 content += line.innerText + "\n";
+                lines += 1;
             }
         }
 
         if (content.length > 0) {
             copyToClipboardAsync(content);
-            alert(`Copied${content.length} lines.`);
+            alert(`Copied ${lines} lines.`);
         }
     }
 
