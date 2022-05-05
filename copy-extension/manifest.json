@@ -1,0 +1,19 @@
+{
+    "name": "CodinGame stderr copy button",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "description": "",
+    "content_scripts": [
+        {
+            "js": [
+                "contentscript.js"
+            ],
+            "matches": [
+                "*://www.codingame.com/ide/*"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs"
+    ]
+}
